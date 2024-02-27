@@ -1,0 +1,13 @@
+FROM python:3.8-slim
+
+RUN apt-get update
+
+WORKDIR /app
+
+COPY . /app
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 80 
+
+CMD uvicorn app:app --host 0.0.0.0 --port 80

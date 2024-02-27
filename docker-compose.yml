@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  text_to_speech:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
